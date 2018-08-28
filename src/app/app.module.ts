@@ -14,6 +14,7 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroesComponent} from './heroes/heroes.component';
 import {HeroSearchComponent} from './hero-search/hero-search.component';
 import {MessagesComponent} from './messages/messages.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import {MessagesComponent} from './messages/messages.component';
       InMemoryDataService, {dataEncapsulation: false}
     )
   ],
-  declarations: [
+  declarations: [ // The components, directives, and pipes that belong to this NgModule.
     AppComponent,
     DashboardComponent,
     HeroesComponent,
@@ -37,7 +38,7 @@ import {MessagesComponent} from './messages/messages.component';
     MessagesComponent,
     HeroSearchComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // Only the root NgModule should set the bootstrap property.
 })
 export class AppModule {
 }

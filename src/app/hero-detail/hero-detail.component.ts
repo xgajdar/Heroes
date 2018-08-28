@@ -12,6 +12,8 @@ import {HeroService} from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
+  isChanged: boolean;
+  isUnchanged = true;
 
   constructor(
     private route: ActivatedRoute,

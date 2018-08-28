@@ -7,6 +7,8 @@ import { HeroService } from '../hero.service';
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
+  // , providers:  [ HeroService ] When you register a provider at the component level,
+  // you get a new instance of the service with each new instance of that component.
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];

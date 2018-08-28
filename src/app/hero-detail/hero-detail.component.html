@@ -7,5 +7,21 @@
     </label>
   </div>
   <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <!--the same in other way-->
+  <!--<button on-click="goBack()">go back</button> -->
+
+  <button (click)="save()">save</button> <!--Element event-->
+
+  <!--The expression could call something like getFoo(). Only you know what getFoo() does. If getFoo() changes something
+  and you happen to be binding to that something, you risk an unpleasant experience. Angular may or may not display
+  the changed value. Angular may detect the change and throw a warning error. In general, stick to data properties and
+  to methods that return values and do no more.-->
+  <button [disabled]="isUnchanged">Changed</button> <!--Element property, not HTML attribute!-->
+  <button bind-disabled="isChanged">Changed</button> <!--Some people prefer the bind- prefix alternative, known as the canonical form:-->
+
+  <!--<p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>-->
+  <!--<p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>-->
+
+  <!--<p><span>"{{title}}" is the <i>interpolated</i> title.</span></p>-->
+  <!--<p>"<span [innerHTML]="title"></span>" is the <i>property bound</i> title.</p>-->
 </div>
